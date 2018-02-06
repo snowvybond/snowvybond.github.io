@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>GAME</title>
+    <style>
+      body{
+        background-image: url("http://getwallpapers.com/wallpaper/full/0/3/0/72043.jpg");
+        background-size: 1366px 768px;
+      }
+      .header{
+        text-align: center;
+        color: white;
+        font-family: 'Mitr', sans-serif;
+        font-size: 40px;
+        text-shadow: 5px 8px red;
+      }
+      .start, .quiz{
+        margin: auto;
+        width: 80%;
+        background-color: white;
+      }
+      .firstbutton, .quizbutton{
+        margin: auto;
+        padding: 20px;
+      }
+      button{
+        font-family: 'Mitr', sans-serif;
+        font-size: 20px;
+        color: red;
+        background-color: black;
+        padding: 5px;
+        width: 100%
+      }
+      #quest{
+        font-family: 'Mitr', sans-serif;
+        font-size: 20px;
+        color: black;
+        text-align: center;
+        padding: 15px;
+      } 
+      .about{
+        font-family: 'Mitr', sans-serif;
+        font-size: 15px;
+        color: red;
+        text-align: center;
+        padding-left: 43%;
+      }
+      #pic{
+        width: 500px;
+        height: 320px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+
+      }
+      .done {
+        margin: auto;
+        width: 80%;
+        background-color: white;
+        font-family: 'Mitr', sans-serif;
+        font-size: 20px;
+        color: black;
+        text-align: center;
+      }
+
+
+    </style>
+  </head>
+
+  <body>
+      <link href="https://fonts.googleapis.com/css?family=Mitr|Righteous" rel="stylesheet">  
+      <div class="header">
+        <h1>THE GTR QUIZ</h1>
+      </div>
+      <div class="start">
+        <table class="firstbutton">
+          <tr>
+            <td><button id="tenquiz" onclick="startQuiz(10)">คำถาม 10ข้อ</button></td>
+            <td><button id="twenquiz" onclick="startQuiz(20)">คำถาม 20ข้อ</button></td>
+          </tr>
+        </table>
+      </div>
+      <div class="about">
+        <table>
+          <tr>
+            <td>
+              <p>Timer :</p>
+            </td>
+            <td>
+              <p id="timer">10</p>
+            </td>
+            <td>
+              <p>, ข้อที่ :</p>
+            </td>
+            <td>
+              <p id="num">1</p>
+            </td>
+            <td>
+              <p>, คะแนน :</p>
+            </td>
+            <td>
+              <p id="score">0</p>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="quiz">
+          <p id="quest"></p>
+          <img id="pic" src=""></img>
+          <table class="quizbutton">
+            <tr>
+              <td><button id="btn_one"></button></td>
+              <td><button id="btn_two"></button></td>
+            </tr>
+            <tr>
+                <td><button id="btn_three"></button></td>
+                <td><button id="btn_four"></button></td>
+            </tr>
+          </table>
+        </div>
+        <div class="done">
+          <table id="doneT">
+            <tr>
+              <td><p>คะแนนของคุณ : </p></td>
+              <td><p id="total"></p></td>
+            </tr>
+          </table>
+        </div>
+        
+      
+      <script src="jquery-3.3.1.min.js"></script>
+
+      <script>
+        var data = [];
+        var quizNum = [];
+        var score = 0;
+        var count = 0; 
+        var interval;
+        var id;
+        $(document).ready(function(){
+          hidequiz();
+          $.ajax({
+            url: 'data.json',
+            method: 'GET',
+            dataType:'json',
+            success: function(response) {
+              // JSON returned --> response
+              for (let i = 0; i < response.length; i++){
+                data[i] = response[i];
+              }
+            }
+          });
+        });
+        function hideStart(){
+          $(".start").hide();
+          $("#tenquiz").hide();
+          $("#twenquiz").hide();
+          console.log("hide");
+        }
+        function startQuiz(num){
+          hideStart();
+          showquiz();
+          generateQuiz(num);
+          id = quizNum.pop();
+          setQuestion(id);
+          count++;
+        }
+        $("#btn_one").click(function(){
+            check(id,"1");
+        })
+        $("#btn_two").click(function(){
+            check(id,"2");
+        })
+        $("#btn_three").click(function(){
+            check(id,"3");
+        })
+        $("#btn_four").click(function(){
+          check(id,"4");
+        })
+        
+        function check(id,ans){
+          if (ans === data[id].answer){
+            score++;
+            $("#score").html(score);
+          }
+          nextQuetion();
+          
+        }
+        function nextQuetion(){
+          clearInterval(interval);
+          if (quizNum.length <= 0){
+            endQuiz();
+          }
+          else{
+            id = quizNum.pop();
+            setQuestion(id);
+            count++;
+            $("#num").html(count);
+          }
+          
+        function endQuiz(){
+          $(".done").show();
+          $(".quiz").hide();
+          $(".quizbutton").hide();
+          $(".about").hide();
+          $("#pic").hide();
+          $("#total").html(score);
+
+        }
+
+        }
+        function countDown(){
+          var seconds = 10,
+          second = 0;
+          interval = setInterval(function() {
+            $("#timer").html(seconds-second);
+            if (second >= seconds) {
+              nextQuetion();
+            }
+            second++;
+          }, 1000);
+        }
+        function generateQuiz(num) {
+          var countRan = 0;
+          while (countRan < num) {
+            var ran = random(21)-1;
+            if (quizNum.indexOf(ran) === -1){
+                quizNum.push(ran);
+                countRan++;
+            }
+          }
+        }
+        
+
+        function setQuestion(id){
+          $("#pic").hide();
+          $("#quest").html(data[id].question);
+          $("#btn_one").html(data[id].choice1);
+          $("#btn_two").html(data[id].choice2);
+          $("#btn_three").html(data[id].choice3);
+          $("#btn_four").html(data[id].choice4);
+          countDown();
+          if (id == 4){
+            $("#pic").attr("src","https://i.ytimg.com/vi/S7kWagOyMZw/maxresdefault.jpg");
+            $("#pic").show();
+          }
+          if (id == 2){
+            $("#pic").attr("src","https://upload.wikimedia.org/wikipedia/commons/0/0d/Nissan_Skyline_-_2_Fast_2_Furious.JPG");
+            $("#pic").show();
+          } 
+          if (id == 14){
+            $("#pic").attr("src","https://upload.wikimedia.org/wikipedia/commons/4/42/Nissan_Skyline_R32_GT-R_001.jpg");
+            $("#pic").show();
+          } 
+          if (id == 17){
+            $("#pic").attr("src","https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Nissan_GT-R_-_Mondial_de_l%27Automobile_de_Paris_2016_-_003.jpg/1024px-Nissan_GT-R_-_Mondial_de_l%27Automobile_de_Paris_2016_-_003.jpg");
+            $("#pic").show();
+          } 
+          if (id == 20){
+            $("#pic").attr("src","https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Nissan_GTR_Cutaway_-_Flickr_-_Alan_D.jpg/1024px-Nissan_GTR_Cutaway_-_Flickr_-_Alan_D.jpg");
+            $("#pic").show();
+          } 
+          
+        }
+
+        function hidequiz() {
+          $(".quiz").hide();
+          $(".quizbutton").hide();
+          $(".about").hide();
+          $(".done").hide();
+
+        }
+        function showquiz() {
+          $(".quiz").show();
+          $(".quizbutton").show();
+          $(".about").show();
+        }
+        function random(max) {
+          return Math.floor(Math.random() * max) + 1;
+        }
+
+      </script>
+  </body>
+</html>

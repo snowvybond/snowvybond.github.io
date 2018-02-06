@@ -1,0 +1,191 @@
+[{
+  "id" : "0",
+  "question" : "GTR รุ่นแรกเปิดตัวเมื่อไหร่ ?",
+  "choice1" : "1. ตุลาคม ปี ค.ศ. 1956",
+  "choice2" : "2. ธันวาคม ปี ค.ศ. 1987",
+  "choice3" : "3. สิงหาคม ปี ค.ศ. 1988",
+  "choice4" : "4. กุมภษพันธ์ ปี ค.ศ. 1969",
+  "answer" : "4"
+ },
+ {
+  "id" : "1",
+  "question" : "Nissan GTR R35 เปิดตัวเมื่อไหร่ ?",
+  "choice1" : "1. ธันวาคม ปี ค.ศ. 2007",
+  "choice2" : "2. ธันวาคม ปี ค.ศ. 2017",
+  "choice3" : "3. มกราคม ปี ค.ศ. 2005",
+  "choice4" : "4. สิงหาคม ปี ค.ศ. 2012",
+  "answer" : "1"
+ },
+ {
+  "id" : "2",
+  "question" : "GTR ของ Paul Walker ใน 2 Fast 2 Furious. เป็นรุ่นอะไร ?",
+  "choice1" : "1. Nissan Skyline GTR R32",
+  "choice2" : "2. Nissan GTR R35",
+  "choice3" : "3. Nissan Skyline GTR R34",
+  "choice4" : "4. Nissan Skyline GTR R33",
+  "answer" : "3"
+ },
+ {
+  "id" : "3",
+  "question" : "Nissan Skyline GTR R34 ใช้เครื่องยนต์อะไร ?",
+  "choice1" : "1. VQ30DETT",
+  "choice2" : "2. RB26DETT",
+  "choice3" : "3. SR20DET",
+  "choice4" : "4. VR38DETT",
+  "answer" : "4"
+ },
+ {
+  "id" : "4",
+  "question" : "ในรูปภาพเป็นGTRรุ่นอะไร",
+  "choice1" : "1. Nissan Skyline GTR R32",
+  "choice2" : "2. Nissan Skyline GTR KPGC110",
+  "choice3" : "3. Nissan Skyline GTR R34",
+  "choice4" : "4. Nissan Skyline GTR KPGC10",
+  "answer" : "4"
+ },
+ {
+  "id" : "5",
+  "question" : "GTR รุ่นใดใช้เครื่องยนต์ RB26DETT เป็นรุ่นแรก ?",
+  "choice1" : "1. Nissan Skyline GTR R32",
+  "choice2" : "2. Nissan Skyline GTR R33",
+  "choice3" : "3. Nissan Skyline GTR R34",
+  "choice4" : "4. Nissan Skyline GTR KPGC10",
+  "answer" : "1"
+ },
+ {
+  "id" : "6",
+  "question" : "Nissan Skyline GTR R34 NISMO Z-Tune มีกี่คันในโลก ?",
+  "choice1" : "1. 15 คัน",
+  "choice2" : "2. 19 คัน",
+  "choice3" : "3. 18 คัน",
+  "choice4" : "4. 17 คัน",
+  "answer" : "2"
+ },
+ {
+  "id" : "7",
+  "question" : "GTR รุ่นใดมีเกียร์ธรรมดา 6 สปีด ?",
+  "choice1" : "1. Nissan Skyline GTR R32",
+  "choice2" : "2. Nissan Skyline GTR R33",
+  "choice3" : "3. Nissan Skyline GTR R34",
+  "choice4" : "4. Nissan Skyline GTR KPGC10",
+  "answer" : "3"
+ },
+ {
+  "id" : "8",
+  "question" : "Nissan Skyline GT-R V·Spec II Nür คำว่า Nür หมายถึงอะไร ?",
+  "choice1" : "1. สนาม Nürburgring",
+  "choice2" : "2. ผู้ออกแบบรถ",
+  "choice3" : "3. ผู้ประกอบเครื่อง",
+  "choice4" : "4. ไม่มีความหมายใดๆ",
+  "answer" : "1"
+ },
+ {
+  "id" : "9",
+  "question" : "Nissan Skyline GT-R V·Spec II Nür มีกี่แรงม้า ?",
+  "choice1" : "1. 450 แรงม้า",
+  "choice2" : "2. 320 แรงม้า",
+  "choice3" : "3. 650 แรงม้า",
+  "choice4" : "4. 1000 แรงม้า",
+  "answer" : "1"
+ },
+ {
+  "id" : "10",
+  "question" : "Nissan GTR รุ่นใดใช้เกียร์ 6-Speed Dual Clutch Automatic ?",
+  "choice1" : "1. Nissan Skyline GTR R32",
+  "choice2" : "2. Nissan GTR R35",
+  "choice3" : "3. Nissan Skyline GTR R34",
+  "choice4" : "4. Nissan Skyline GTR R33",
+  "answer" : "2"
+ },
+ {
+  "id" : "11",
+  "question" : "GTR รุ่นใดไม่มีคำว่า Skyline ?",
+  "choice1" : "1. Nissan GTR R35",
+  "choice2" : "2. Nissan Skyline GTR R32",
+  "choice3" : "3. Nissan Skyline GTR R34",
+  "choice4" : "4. Nissan Skyline GTR R33",
+  "answer" : "1"
+ },
+ {
+  "id" : "12",
+  "question" : "Nissan GTR Skyline R34 เลิกผลิตเมื่อไหร่ ?",
+  "choice1" : "1. สิงหาคม ปี ค.ศ. 2002",
+  "choice2" : "2. กรกฎาคม ปี ค.ศ. 2003",
+  "choice3" : "3. มกราคม ปี ค.ศ. 2005",
+  "choice4" : "4. สิงหาคม ปี ค.ศ. 2012",
+  "answer" : "1"
+ },
+ {
+  "id" : "13",
+  "question" : "GTR ผลิตขึ้นที่โรงงานอะไร ?",
+  "choice1" : "1. Musashimurayama, Japan",
+  "choice2" : "2. Sushimano, Japan",
+  "choice3" : "3. Fuji Heavy Industry, Japan",
+  "choice4" : "4. Mamoto, Japan",
+  "answer" : "1"
+ },
+ {
+  "id" : "14",
+  "question" : "ในรูปภาพเป็นGTRรุ่นอะไร",
+  "choice1" : "1. Nissan Skyline GTR R32",
+  "choice2" : "2. Nissan Skyline GTR KPGC110",
+  "choice3" : "3. Nissan Skyline GTR R34",
+  "choice4" : "4. Nissan Skyline GTR KPGC10",
+  "answer" : "1"
+ },
+ {
+  "id" : "15",
+  "question" : "Nissan GTR Skyline R32 เปิดตัวเมื่อไหร่ ?",
+  "choice1" : "1. สิงหาคม ปี ค.ศ. 1989",
+  "choice2" : "2. กรกฎาคม ปี ค.ศ. 2000",
+  "choice3" : "3. มกราคม ปี ค.ศ. 1967",
+  "choice4" : "4. สิงหาคม ปี ค.ศ. 1990",
+  "answer" : "1"
+ },
+ {
+  "id" : "16",
+  "question" : "ฉายาของ GTR คืออะไร ?",
+  "choice1" : "1. Dragon",
+  "choice2" : "2. Godzilla",
+  "choice3" : "3. Devil",
+  "choice4" : "4. Monster",
+  "answer" : "2"
+ },
+ {
+  "id" : "17",
+  "question" : "ในรูปภาพเป็นGTRรุ่นอะไร ?",
+  "choice1" : "1. Nissan Skyline GTR R32",
+  "choice2" : "2. Nissan GTR R35",
+  "choice3" : "3. Nissan Skyline GTR R34",
+  "choice4" : "4. Nissan Skyline GTR KPGC10",
+  "answer" : "2"
+ },
+ {
+  "id" : "18",
+  "question" : "Nissan Skyline GTR R33 ผลิตทั้งหมดกี่คัน ?",
+  "choice1" : "1. 11,890 คัน",
+  "choice2" : "2. 14,673 คัน",
+  "choice3" : "3. 12,434 คัน",
+  "choice4" : "4. 16,674 คัน",
+  "answer" : "4"
+ },
+ {
+  "id" : "19",
+  "question" : "Nissan GTR R35 มีระบบขับเคลื่อนแบบใด ?",
+  "choice1" : "1. ขับเคลื่อน4ล้อตลอดเวลา",
+  "choice2" : "2. ขับเคลื่อนล้อหลัง",
+  "choice3" : "3. ขับเคลื่อนล้อหน้า",
+  "choice4" : "4. ขับเคลื่อน4ล้อบางเวลา",
+  "answer" : "1"
+ },
+ {
+  "id" : "20",
+  "question" : "ในรูปภาพเป็นGTRรุ่นอะไร ?",
+  "choice1" : "1. Nissan Skyline GTR R32",
+  "choice2" : "2. Nissan GTR R35",
+  "choice3" : "3. Nissan Skyline GTR R34",
+  "choice4" : "4. Nissan Skyline GTR KPGC10",
+  "answer" : "2"
+ }
+
+]
